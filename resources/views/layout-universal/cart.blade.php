@@ -131,9 +131,9 @@
                              @foreach ($product as $row) 
                             <div class="col-md-3">
                                 <div class="product">
-                                    <div class="image">
+                                    <div class="image" style="display: flex;justify-content: center;">
                                         <a  href="{{url('product/'.$row->id_produk)}}">
-                                        <img src="https://drive.google.com/uc?export=view&id={{substr($row->fotoproduk[0]->link_fotoproduk,33)}}" alt="loading" class="img-responsive image1">
+                                        <img style="width:  200px;height: 200px;object-fit: cover;" src="https://drive.google.com/uc?export=view&id={{substr($row->fotoproduk[0]->link_fotoproduk,33)}}" alt="loading" class="img-responsive image1">
                                            
                                         </a>
                                     </div>

@@ -180,7 +180,7 @@ _________________________________________________________ -->
     jQuery(document).ready(function($) {
     var id_provinsi;
 
-      $.get('/laravel/public/provinsi', function(data){  
+      $.get('/provinsi', function(data){  
         id_provinsi=data[0].province_id;
 
        $.each(data, function(index, data){
@@ -192,7 +192,7 @@ _________________________________________________________ -->
             else{ $('#provinsi').append('<option value="'+data.province+'" id="'+data.province_id+'">'+data.province+'</option>');}
         });
 
-        $.get('/laravel/public/kota/'+id_provinsi, function(data){  
+        $.get('/kota/'+id_provinsi, function(data){  
         $.each(data, function(index, data){
             
              if('{{$pembeli->kota}}'==data.city_name){

@@ -267,12 +267,12 @@ class AdminTransaksiController extends Controller
         $transaksi->status = "telah dibayar";
          $receiverAddress = $transaksi->pembeli->user->email;
 
-    Mail::to($receiverAddress)->send(new telah_dikonfirmasi($transaksi));
+    // Mail::to($receiverAddress)->send(new telah_dikonfirmasi($transaksi));
     }
     else {
         $transaksi->status = "gagal";
           $receiverAddress = $transaksi->pembeli->user->email;
-          Mail::to($receiverAddress)->send(new telah_dikonfirmasi($transaksi));
+        //   Mail::to($receiverAddress)->send(new telah_dikonfirmasi($transaksi));
     
         foreach ($transaksi->detail_transaksi as $value) {
             $detail_transaksi=detail_transaksi::find($value->id_detail_transaksi);

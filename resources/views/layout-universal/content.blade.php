@@ -25,9 +25,9 @@
                         @foreach ($product as $product) 
                             <div class="col-md-4 col-sm-6">
                                 <div class="product">
-                                    <div class="image">
+                                    <div class="image" style="display: flex;justify-content: center;">
                                         <a href="{{url('product/'.$product->id_produk)}}">
-                                            <img src="https://drive.google.com/uc?export=view&id={{substr($product->fotoproduk[0]->link_fotoproduk,33)}}" alt="" class="img-responsive image1">
+                                            <img style="width:  200px;height: 200px;object-fit: cover;" src="https://drive.google.com/uc?export=view&id={{substr($product->fotoproduk[0]->link_fotoproduk,33)}}" alt="" class="img-responsive image1">
                                         </a>
                                     </div>
                                     <!-- /.image -->

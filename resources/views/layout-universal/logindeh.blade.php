@@ -7,7 +7,7 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MHfabulous</title>
+    <title>TUKUAE</title>
 
     <meta name="keywords" content="">
 
@@ -34,7 +34,7 @@
 <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="{{url('universal/img/mhf.png')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{url('universal/img/tukuaesmall.jpg')}}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{url('universal/img/apple-touch-icon-57x57.png')}}" />
     <link rel="apple-touch-icon" sizes="72x72" href="{{url('universal/img/apple-touch-icon-72x72.png')}}" />
@@ -85,7 +85,7 @@
 
 </head>
 <body>
- @include('.layout-universal.header')
+
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <!-- <section class="content-header">
@@ -121,60 +121,6 @@
     </script>
                        <script>
 
-$(document).ready(function(){
-    if(window.matchMedia('(max-width: 768px)').matches){
-        $('#blah').removeClass('hidden');
-          $('#yess').removeClass('hidden');
-            $('#yess').addClass('btn btn-template-main');
-            $("#yes").hide();
-    }
-  
-    $("#yes").click(function(){
- 
-         $('#blah').toggle();
-          
-         $("#women1").toggle();
-         $("#women2").toggle();
-         $("#women3").toggle();
-         $("#women4").toggle();
-          $("#women5").toggle();
-           $("#women6").toggle();
-         $("#brand").toggle();
-         $("#review").toggle();
-        $('#blah').removeClass('hidden');
-      
-        
-    });
-   
-
-});
-$('#clear').click(function(){
-    $('.check').prop('checked', false);
-})
-
-$('#cart').click(function(){
-    if ('{{count($belumbayar)}}'!=0){
-        alert('Complete your payment first')
-    }
-    else {
-        window.location="{{url('cart')}}";
-    }
-})
-
-$('#filterbrand').on('submit',function(e){
-    var min=false;
-    $("#filterbrand").find(".filterbrand").each(function(){
-        if($(this).prop('checked')==true){
-            min=true;
-        }
-    });
-    if(min==false){
-    alert('please choose at least 1 brand');
-    return false;
-    }else{
-        return true;
-    }
-})
 
 
 </script>

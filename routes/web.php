@@ -133,7 +133,7 @@ Route::get('/kota/{id}',  'AlamatController@kota')->name('kota');
 Route::get('/kota', function () {
     $url = "http://api.rajaongkir.com/starter/city";
     $response = \Httpful\Request::get($url)
-        ->addHeaders(array('key' => '8a139d4ada80a196c057bc885ba410c6',))
+        ->addHeaders(array('key' => '6a48afc7e1c03a9d013cbdfb79647ebe',))
     ->expectsJson()
     ->send();
     $kota= $response->body->rajaongkir->results;
@@ -142,11 +142,12 @@ Route::get('/kota', function () {
 Route::get('/provinsi', function () {
     $url = "http://api.rajaongkir.com/starter/province";
     $response = \Httpful\Request::get($url)
-        ->addHeaders(array('key' => '8a139d4ada80a196c057bc885ba410c6',))
+        ->addHeaders(array('key' => '6a48afc7e1c03a9d013cbdfb79647ebe',))
     ->expectsJson()
     ->send();
     $provinsi= $response->body->rajaongkir->results;
-    return $provinsi;   
+    return $provinsi;  
+ 
 });
 Route::post('alamat/simpan',  'AlamatController@simpan')->name('simpan');
 

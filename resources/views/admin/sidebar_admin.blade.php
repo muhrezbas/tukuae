@@ -4,12 +4,12 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="{{url('universal/img/tukuaesmall.jpg')}}" class="img-circle" alt="User Image">
+      <div class="user-panel" style="display:flex;">
+        <div class="image" style="padding: 10px; margin-left: -5px;background-color: white;border-radius: 50%;width: 61px;">
+          <img src="{{url('universal/img/mhf.png')}}" class="img-circle" alt="User Image">
         </div>
-        <div class="pull-left info">
-        <p>Admin TUKUAE</p>
+        <div class="info">
+        <p>Admin MHFabulous</p>
           <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
         </div>
       </div>

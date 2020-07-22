@@ -205,7 +205,7 @@ class ReviewController extends Controller
          }
  $data = $request->session()->all();
 $transaksi= new transaksi;
-$transaksi->kode='tukuae'.Carbon::now()->format('dmY').auth()->user()->pembeli->id_pembeli.$lastId;
+$transaksi->kode='mhfabulous'.Carbon::now()->format('dmY').auth()->user()->pembeli->id_pembeli.$lastId;
 $transaksi->id_pembeli = auth()->user()->pembeli->id_pembeli;
 $transaksi->tanggal =  Carbon::now()->format('Y-m-d H:i:s');
 $transaksi->id_rekening = $data['id_rekening'];
@@ -239,10 +239,10 @@ $pengiriman->status = 'menunggu konfirmasi';
 $pengiriman->save();
 
 keranjang::where('id_pembeli',auth()->user()->pembeli->id_pembeli)->delete();
- $receiverAddress = auth()->user()->email;
-$waktu = Carbon::now();
-        $waktu->addHours(2); 
-Mail::to($receiverAddress)->send(new Konfirmasi_pembayaran($transaksi,$waktu));
+//  $receiverAddress = auth()->user()->email;
+// $waktu = Carbon::now();
+//         $waktu->addHours(2); 
+// Mail::to($receiverAddress)->send(new Konfirmasi_pembayaran($transaksi,$waktu));
 
  return redirect('detail');
 }

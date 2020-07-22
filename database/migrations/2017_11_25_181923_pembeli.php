@@ -24,8 +24,7 @@ class Pembeli extends Migration
             $table->string('telp');
             $table->timestamps();
             $table->foreign('id_user')
-            ->references('id')->on('user')
-           ->onDelete()->onUpdate('cascade');
+            ->references('id')->on('users');
          });
 
     }

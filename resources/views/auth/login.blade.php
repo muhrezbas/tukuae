@@ -1,5 +1,5 @@
 
-@extends('layout-universal.master')
+@extends('layout-universal.logindeh')
 
 @section('css')
 

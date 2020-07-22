@@ -18,8 +18,7 @@ class Fotoproduk extends Migration
             $table->string('link_fotoproduk');
             $table->unsignedInteger('id_produk');
             $table->foreign('id_produk')
-            ->references('id_produk')->on('produk')
-           ->onDelete('cascade')->onUpdate('cascade');        
+            ->references('id_produk')->on('produk');
             
 
             $table->timestamps();

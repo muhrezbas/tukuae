@@ -46,7 +46,7 @@
 <br/>
 <label> bukti</label>
 <br/>
-<img src="http://localhost:8080/laravel/public/storage/{{$pembayaran->bukti}}" /><
+<img src="{{asset('storage/'.$pembayaran->bukti)}}" />
 <br/>
 <label>Status</label>
 <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">

@@ -50,7 +50,7 @@ class AlamatController extends Controller
      public function kota($id) {
         $url = "http://api.rajaongkir.com/starter/city?province=".$id;
         $response = \Httpful\Request::get($url)
-         ->addHeaders(array('key' => '8a139d4ada80a196c057bc885ba410c6',))
+         ->addHeaders(array('key' => '6a48afc7e1c03a9d013cbdfb79647ebe',))
         ->expectsJson()
         ->send();
         $data = $response->body->rajaongkir->results;

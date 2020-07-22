@@ -19,8 +19,7 @@ class Jenis extends Migration
             $table->unsignedInteger('id_kategori');            
             $table->timestamps();
             $table->foreign('id_kategori')
-            ->references('id_kategori')->on('kategori')
-           ->onDelete()->onUpdate('cascade');
+            ->references('id_kategori')->on('kategori');
 
             });
 

@@ -24,11 +24,9 @@ class Produk extends Migration
             $table->integer('harga');
             $table->timestamps();
             $table->foreign('id_jenis')
-            ->references('id_jenis')->on('jenis')
-           ->onDelete()->onUpdate('cascade');
+            ->references('id_jenis')->on('jenis');
            $table->foreign('id_brand')
-            ->references('id_brand')->on('brand')
-           ->onDelete()->onUpdate();
+            ->references('id_brand')->on('brand');
 
   
         });

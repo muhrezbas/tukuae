@@ -20,11 +20,9 @@ class Keranjang extends Migration
             $table->integer('jumlah');
             $table->timestamps();
             $table->foreign('id_ukuran')
-            ->references('id_ukuran')->on('ukuran')
-           ->onDelete('cascade')->onUpdate('cascade');
+            ->references('id_ukuran')->on('ukuran');
            $table->foreign('id_pembeli')
-            ->references('id_pembeli')->on('pembeli')
-           ->onDelete()->onUpdate();
+            ->references('id_pembeli')->on('pembeli');
          });
 
     }

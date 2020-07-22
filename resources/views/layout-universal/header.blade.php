@@ -21,9 +21,13 @@ _________________________________________________________ -->
                                     <a style="padding:7px 0px; " id="" href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">TRANSACTION <b class="caret"></b></a>
                                     <div id="">
                                     <ul class="dropdown-menu">
-                                        <li><a style="color: #555555" href="{{url('detail')}}">NOW</a>
+                                        <li><a style="color: #555555;" class="hidden-xs" href="{{url('detail')}}">NOW</a>
                                         </li>
-                                        <li><a  style="color: #555555" href="{{url('history/')}}">HISTORY</a>
+                                        <li><a  style="color: #555555" class="hidden-xs"  href="{{url('history/')}}">HISTORY</a>
+                                        </li>
+                                        <li><a style="color: white;" class="visible-xs" href="{{url('detail')}}">- NOW</a>
+                                        </li>
+                                        <li><a  style="color: white" class="visible-xs"  href="{{url('history/')}}">- HISTORY</a>
                                         </li>
 
 
@@ -33,12 +37,12 @@ _________________________________________________________ -->
                             @endif
                                 
                              
-                             <li><a style="padding:7px 0px;cursor: pointer;" id="cart"  ><i class="fa fa-shopping-cart"></i> <span class="hidden-xs text-uppercase">Shopping Cart</span></a></li>
+                             <li><a style="padding:7px 0px;cursor: pointer;" id="cart"  ><i class="fa fa-shopping-cart"></i> <span class="text-uppercase">Shopping Cart</span></a></li>
                             @if (auth()-> user()!= NULL)
                              <li><a  style="padding:7px 0px;"href="{{ route('logout') }}"
                               onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();"><i class="fa fa-user"></i> 
-                              <span class="hidden-xs text-uppercase">Log Out</span></a></li>
+                              <span class="text-uppercase">Log Out</span></a></li>
                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
@@ -47,8 +51,8 @@ _________________________________________________________ -->
                             @else
 
 
-                                <li><a style="padding:7px 0px;" href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a></li>
-                                <li><a style="padding:7px 0px;" href="{{ route('login') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a></li>
+                                <li><a style="padding:7px 0px;" href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="text-uppercase">Sign in</span></a></li>
+                                <li><a style="padding:7px 0px;" href="{{ route('login') }}"><i class="fa fa-user"></i> <span class="text-uppercase">Sign up</span></a></li>
                                 @endif
                             @endif
                             </ul>
@@ -72,8 +76,11 @@ _________________________________________________________ -->
                         <div class="navbar-header">
 
                             <a class="navbar-brand home" href="{{url('content')}}">
-                                <img src="{{url('universal/img/tukuae.jpg')}}" alt="Pusat Grosir logo" class="hidden-xs hidden-sm">
-                                <img src="{{url('universal/img/tukuaesmall.jpg')}}" alt="Pusat Grosir logo" style="width: 44px;" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                                <!-- <img src="{{url('universal/img/tukuae.jpg')}}" alt="Pusat Grosir logo" class="hidden-xs hidden-sm">
+                                https://mhfabulous.com/wp-content/uploads/2020/01/output-onlinepngtools.png
+                                <img src="{{url('universal/img/tukuaesmall.jpg')}}" alt="Pusat Grosir logo" style="width: 44px;" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span> -->
+                                <img src="https://mhfabulous.com/wp-content/uploads/2020/01/output-onlinepngtools.png"  style="width: 105px;" alt="Pusat Grosir logo" class="hidden-xs hidden-sm">
+                                <img src="https://mhfabulous.com/wp-content/uploads/2020/01/output-onlinepngtools.png" alt="Pusat Grosir logo" style="width: 70px;" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                             </a>
                             <div class="navbar-buttons">
                                 <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
